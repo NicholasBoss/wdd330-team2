@@ -3,10 +3,14 @@ import { setLocalStorage } from "./utils.mjs";
 
 let product = {};
 
+function addToCart() {
+  setLocalStorage("so-cart", product);
+}
+
 export default async function ProductDetails(productId) { 
   product = await findProductById(productId);
   renderProductDetails();
-    
+  document.getElementById("addToCart").addEventListener("click", addToCart);
 }
 
 function renderProductDetails(){
