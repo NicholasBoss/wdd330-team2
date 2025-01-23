@@ -27,4 +27,4 @@ export function getParam(param){
   const urlParams = new URLSearchParams(queryString);
   const product = urlParams.get(param)
   return product
-}
+} 
