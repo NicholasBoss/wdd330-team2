@@ -12,7 +12,9 @@ export function getLocalStorage(key) {
 // save data to local storage
 export function setLocalStorage(key, data) {
   // check to see if data exists in key given, if it does, append to it
-  var existingData = [getLocalStorage(key)] || [];
+  let existingData = getLocalStorage(key) || [];
+
+  existingData = Array.isArray(existingData) ? existingData : [existingData];
 
   if (existingData.length !== 0) {
     let newData = data;
