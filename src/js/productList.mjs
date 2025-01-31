@@ -8,7 +8,8 @@ function createProductCard(markup) {
 export async function productList(category) {
     let products = await getData(category);
     console.log(products);
-    products.forEach(product => {
+    products.slice(0, 4).forEach(product => {
+    // products.forEach(product => {
         let markup = `<li class="product-card">
         <a href="product_pages/index.html?product=${product.Id}">
         <img
