@@ -39,3 +39,38 @@ export function getParam(param){
   const product = urlParams.get(param)
   return product
 } 
+
+
+export function renderWithTemplate(template, parentElement, data, callback, position = "afterbegin", clear = true) {
+
+  if (clear) {
+    parentElement.innerHTML = "";
+  }
+    parentElement.insertAdjacentHTML(position, template);
+
+  if (callback) {
+    callback(data);
+  }
+
+}
+
+function loadTemplate(path) {
+  
+  return async function () {
+    const response = await fetch(path);
+    if (response.ok) {
+      const data = await response.text();
+      return data;
+    } else {
+      throw new Error("Bad Response");
+    }
+  }
+}
+
+export async function loadHeaderFooter() {
+  const header = loadTemplate("../partials/header.html");
+  const footer = loadTemplate("../partials/footer.html");
+
+  renderWithTemplate(await header(), qs("header"));
+  renderWithTemplate(await footer(), qs("footer"));
+}
