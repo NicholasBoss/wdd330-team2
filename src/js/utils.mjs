@@ -9,21 +9,31 @@ export function qs(selector, parent = document) {
 export function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
-// save data to local storage
 export function setLocalStorage(key, data) {
   // check to see if data exists in key given, if it does, append to it
   let existingData = getLocalStorage(key) || [];
 
   existingData = Array.isArray(existingData) ? existingData : [existingData];
 
-  if (existingData.length !== 0) {
-    let newData = data;
-    existingData.push(newData);
-  } else {
-    existingData = data;
-  }
+  // Always wrap data in an array and append to existingData
+  existingData.push(data);
+
   localStorage.setItem(key, JSON.stringify(existingData));
 }
+// export function setLocalStorage(key, data) {
+//   // check to see if data exists in key given, if it does, append to it
+//   let existingData = getLocalStorage(key) || [];
+
+//   existingData = Array.isArray(existingData) ? existingData : [existingData];
+
+//   if (existingData.length !== 0) {
+//     let newData = data;
+//     existingData.push(newData);
+//   } else {
+//     existingData = data;
+//   }
+//   localStorage.setItem(key, JSON.stringify(existingData));
+// }
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
   qs(selector).addEventListener("touchend", (event) => {
