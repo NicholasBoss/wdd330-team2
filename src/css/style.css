@@ -140,6 +140,9 @@ button {
   list-style-type: none;
   padding: 0;
 }
+.product-categories img {
+  height: 200px;
+}
 /* Styles for product lists */
 .product-card {
   flex: 1 1 45%;
