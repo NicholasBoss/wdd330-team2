@@ -133,6 +133,13 @@ button {
   text-decoration: none;
   color: var(--dark-grey);
 }
+.product-categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
 /* Styles for product lists */
 .product-card {
   flex: 1 1 45%;
