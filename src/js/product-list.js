@@ -1,2 +1,3 @@
 import { productList } from "./productList.mjs"
-productList("tents");
+import { getParam } from "./utils.mjs";
+productList(getParam("category"));
