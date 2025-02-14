@@ -133,6 +133,27 @@ button {
   text-decoration: none;
   color: var(--dark-grey);
 }
+.product-categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+.product-categories img {
+  height: 200px;
+}
+.product-categories figcaption {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+}
+.product-categories a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 /* Styles for product lists */
 .product-card {
   flex: 1 1 45%;
@@ -140,6 +161,7 @@ button {
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+  text-align: center;
 }
 .product-card h2,
 .product-card h3,
