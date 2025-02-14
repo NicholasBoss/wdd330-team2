@@ -147,8 +147,10 @@ button {
   display: flex;
   flex-direction: column;
   text-align: center;
-  text-decoration: none;
   color: black;
+}
+.product-categories a {
+  text-decoration: none;
 }
 /* Styles for product lists */
 .product-card {
