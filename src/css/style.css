@@ -127,6 +127,9 @@ button, .navBtnLeft {
   max-width: 600px;
   margin: auto;
 }
+.total {
+  display: none;
+}
 .products, .total {
   padding: 0.5em;
 }
