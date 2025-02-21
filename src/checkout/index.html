@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="../js/checkout.js"></script>
-    <script type="module" src="../js/checkoutProcess.mjs"></script>
   </head>
 
   <body>
@@ -61,7 +60,7 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
-        <form class= "checkoutForm" action="">
+        <form name="checkout" class="checkoutForm" action="">
           <fieldset>
             <legend>Customer Name</legend>
             <label>First Name:* <input type="text" name="fname" id="fname" required></label><br>
@@ -80,11 +79,29 @@
             <label>Expiration Date:* <input type="text" name="expiration" id="expiration" value="8/25" required></label><br>
             <label>Security Code:* <input type="text" name="code" id="securityCode" value="123" required></label><br>
           </fieldset>
-          <fieldset>
+          <fieldset class="checkout-summary">
             <legend>Order Summary</legend>
-            <section id="orderSummary"></section>
+            <ul>
+              <li>
+                <label for="cartTotal">
+                  Item Subtotal(<span id="num-items"></span>)</label>
+                <p name="cartTotal" id="cartTotal"></p>
+              </li>
+              <li>
+                <label for="shipping">Shipping Estimate</label>
+                <p id="shipping"></p>
+              </li>
+              <li>
+                <label for="tax">Tax</label>
+                <p id="tax"></p>
+              </li>
+              <li>
+                <label for="orderTotal"><b>Order Total</b></label>
+                <p id="orderTotal"></p>
+              </li>
+            </ul>
           </fieldset>
-          <button class="purchaseButton">Purchase</button>
+          <button class="purchaseButton" type="submit">Purchase</button>
         </form>
       </section>
     </main>
