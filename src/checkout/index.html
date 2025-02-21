@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="../js/checkout.js"></script>
+    <script type="module" src="../js/checkoutProcess.mjs"></script>
   </head>
 
   <body>
@@ -81,10 +82,7 @@
           </fieldset>
           <fieldset>
             <legend>Order Summary</legend>
-            <label>Item Subtotal(<p id="cartQty"></p>): <input type="text" name="cartSubTotal" id="cartSubTotal" value="" disabled></label><br>
-            <label>Shipping Estimate: <input type="text" name="shippingEst" id="shippingEst"></label><br>
-            <label>Tax: <input type="text" name="cartTax" id="cartTax"></label><br>
-            <label><b>Order Total:</b> <input type="text" name="orderTotal" id="orderTotal"></label>
+            <section id="orderSummary"></section>
           </fieldset>
           <button class="purchaseButton">Purchase</button>
         </form>
