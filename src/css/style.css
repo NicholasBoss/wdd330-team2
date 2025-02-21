@@ -235,6 +235,21 @@ button, .navBtnLeft {
   grid-column: 3;
 }
 
+input[type=email], input[type=password], input[type=text], input[type=tel], input[type=date], input[type=time], textarea {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 2% auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 66%;
+  margin: auto 2%;
+  padding: 2%;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
