@@ -250,6 +250,19 @@ input[type=number] {
   padding: 2%;
 }
 
+.checkoutForm label {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutForm input {
+  width: 80%;
+  margin: 5px;
+  align-self: center;
+}
+
+
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
