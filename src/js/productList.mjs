@@ -1,4 +1,4 @@
-import { getData } from "./productData.mjs";
+import { getProductsByCategory } from "./externalServices.mjs";
 
 function createProductCard(markup) {
     let list = document.querySelector(".product-list");
@@ -6,7 +6,7 @@ function createProductCard(markup) {
 }
 
 export async function productList(category) {
-    let products = await getData(category);
+    let products = await getProductsByCategory(category);
     // console.log(products);
     products.slice(0, 4).forEach(product => {
     // products.forEach(product => {
@@ -55,7 +55,7 @@ export async function productList(category) {
 
 
 // export async function productList(category) {
-//     let data = await getData(category);
+//     let data = await getProductsByCategory(category);
 //     return data;
 // }
 

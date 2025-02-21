@@ -81,7 +81,7 @@ header {
   color: var(--tertiary-color);
 }
 
-button {
+button, .navBtnLeft {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
   color: white;
@@ -90,6 +90,14 @@ button {
   border: 0;
   font-size: var(--large-font);
   cursor: pointer;
+}
+.navBtnLeft {
+  text-decoration: none;
+  max-width: 150px;
+  text-align: center;
+  padding: 2%;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 .divider {
   border-bottom: 2px solid var(--primary-color);
@@ -119,7 +127,10 @@ button {
   max-width: 600px;
   margin: auto;
 }
-.products {
+.total {
+  display: none;
+}
+.products, .total {
   padding: 0.5em;
 }
 .product-list {
@@ -223,6 +234,60 @@ button {
   grid-row: 2;
   grid-column: 3;
 }
+
+input[type=email], input[type=password], input[type=text], input[type=tel], input[type=date], input[type=time], textarea {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 2% auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 66%;
+  margin: auto 2%;
+  padding: 2%;
+}
+
+.checkoutForm label {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutForm input {
+  width: 80%;
+  margin: 5px;
+  align-self: center;
+}
+
+/* checkout styles */
+.checkout-form {
+  padding: 0.5em;
+}
+.checkout-form label {
+  display: block;
+}
+.checkout-form input {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.checkout-summary > ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.checkout-summary li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-summary input {
+  width: 25%;
+  font-size: 1em;
+}
+
+
 
 @media screen and (min-width: 500px) {
   body {

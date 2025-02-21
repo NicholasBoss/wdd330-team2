@@ -60,6 +60,49 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        <form name="checkout" class="checkoutForm" action="">
+          <fieldset>
+            <legend>Customer Name</legend>
+            <label>First Name:* <input type="text" name="fname" id="fname" required></label><br>
+            <label>Last Name:* <input type="text" name="lname" id="lname" required></label><br>
+          </fieldset>
+          <fieldset>
+            <legend>Address</legend>
+            <label>Street Address:* <input type="text" name="street" id="streetAddress" required></label><br>
+            <label>City:* <input type="text" name="city" id="city" required></label><br>
+            <label>State:* <input type="text" name="state" id="state" required></label><br>
+            <label>Zipcode:* <input type="text" name="zip" id="zipcode" required></label><br>
+          </fieldset>
+          <fieldset>
+            <legend>Payment</legend>
+            <label>Credit Card Number:* <input type="text" name="cardNumber" id="cardNumber" value="1234123412341234" required></label><br>
+            <label>Expiration Date:* <input type="text" name="expiration" id="expiration" value="8/25" required></label><br>
+            <label>Security Code:* <input type="text" name="code" id="securityCode" value="123" required></label><br>
+          </fieldset>
+          <fieldset class="checkout-summary">
+            <legend>Order Summary</legend>
+            <ul>
+              <li>
+                <label for="cartTotal">
+                  Item Subtotal(<span id="num-items"></span>)</label>
+                <p name="cartTotal" id="cartTotal"></p>
+              </li>
+              <li>
+                <label for="shipping">Shipping Estimate</label>
+                <p id="shipping"></p>
+              </li>
+              <li>
+                <label for="tax">Tax</label>
+                <p id="tax"></p>
+              </li>
+              <li>
+                <label for="orderTotal"><b>Order Total</b></label>
+                <p id="orderTotal"></p>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="purchaseButton" type="submit">Purchase</button>
+        </form>
       </section>
     </main>
 

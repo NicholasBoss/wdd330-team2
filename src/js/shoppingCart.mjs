@@ -7,13 +7,14 @@ function renderCartContents() {
   }
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  document.querySelector(".total").style.display = "block";
 }
 
 function cartItemTemplate(item) {
     const newItem = `<li class="cart-card divider">
     <a href="#" class="cart-card__image">
         <img
-        src="${item.Image}"
+        src="${item.Images.PrimarySmall}"
         alt="${item.Name}"
         />
     </a>
