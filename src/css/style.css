@@ -235,13 +235,17 @@ button, .navBtnLeft {
   grid-column: 3;
 }
 
-
-#dialog {
+.active {
+  display: flex;
+  
+}
+.dialog {
   background-color: white;
   color: #303030;
   border: #f0a868 solid 2px;
   position: absolute;
-  display: hidden;
+  display: none;
+  flex-direction: column;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -304,10 +308,7 @@ input[type=number] {
   font-size: 1em;
 }
 
-.active {
-  display: flex;
-  flex-direction: column;
-}
+
 
 
 
