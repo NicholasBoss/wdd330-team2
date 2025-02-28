@@ -287,6 +287,10 @@ input[type=number] {
   font-size: 1em;
 }
 
+.show {
+  width: 25%;
+}
+
 
 
 @media screen and (min-width: 500px) {
