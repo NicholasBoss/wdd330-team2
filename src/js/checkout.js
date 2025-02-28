@@ -21,4 +21,8 @@ document.forms["checkout"].addEventListener("submit", (e) => {
   myForm.reportValidity();
   if(chk_status)
     checkoutProcess.checkout(e.target);
+    // clear the cart
+    localStorage.removeItem("so-cart");  
+    // redirect to success.html
+    window.location.href = "success.html";
 });
