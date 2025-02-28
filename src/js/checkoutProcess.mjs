@@ -72,8 +72,8 @@ const checkoutProcess = {
         tax.innerText = "$" + this.tax;
         orderTotal.innerText = "$" + this.orderTotal;
       },
-    checkout: async function (form) {
-    const json = formDataToJSON(form);
+    checkout: async function (form) {    
+      const json = formDataToJSON(form);
     // add totals, and item details
     json.orderDate = new Date();
     json.orderTotal = this.orderTotal;
