@@ -241,9 +241,7 @@ button, .navBtnLeft {
   color: #303030;
   border: #f0a868 solid 2px;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: hidden;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -306,8 +304,9 @@ input[type=number] {
   font-size: 1em;
 }
 
-.show {
-  width: 25%;
+.active {
+  display: flex;
+  flex-direction: column;
 }
 
 

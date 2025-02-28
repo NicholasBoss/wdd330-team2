@@ -7,11 +7,14 @@ function addToCart() {
   setLocalStorage("so-cart", product);
   // inform the user that the product has been added to the cart
   // use a dialog box
-  document.querySelector("#dialog").classList.add("show");
+  document.querySelector("#dialog").classList.toggle("active");
   // add a message to the dialog box
   document.querySelector("#dialogMessage").innerHTML = `${product.Name} has been added to your cart`;
-
 }
+
+document.querySelector("#closeButton").addEventListener("click", function () {
+    document.querySelector("#dialog").classList.toggle("active");
+});
 
 export default async function ProductDetails(productId) { 
   product = await findProductById(productId);
