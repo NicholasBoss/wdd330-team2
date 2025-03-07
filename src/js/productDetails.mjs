@@ -5,7 +5,15 @@ let product = {};
 
 function addToCart() {
   setLocalStorage("so-cart", product);
+  // inform the user that the product has been added to the cart
+  // use a dialog box
+  // make the dialog box visible using id active
+  document.querySelector(".dialog").style.display = "flex";
+  // add a message to the dialog box
+  document.querySelector("#dialogMessage").innerHTML = `${product.Name} has been added to your cart`;
 }
+
+
 
 export default async function ProductDetails(productId) { 
   product = await findProductById(productId);

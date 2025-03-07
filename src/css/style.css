@@ -235,6 +235,27 @@ button, .navBtnLeft {
   grid-column: 3;
 }
 
+.active {
+  display: flex;
+  
+}
+.dialog {
+  background-color: white;
+  color: #303030;
+  border: #f0a868 solid 2px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  width: 200px;
+}
+
+
+
 input[type=email], input[type=password], input[type=text], input[type=tel], input[type=date], input[type=time], textarea {
   width: 80%;
   padding: 12px 20px;
@@ -286,6 +307,20 @@ input[type=number] {
   width: 25%;
   font-size: 1em;
 }
+
+/* alert styles */
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  border: 1px solid darkorange;
+}
+.alert > p {
+  margin: 0;
+}
+
 
 
 

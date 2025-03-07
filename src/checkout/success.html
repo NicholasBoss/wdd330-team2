@@ -6,25 +6,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sleep Outside | Checkout</title>
+    <title>Sleep Outside | Success</title>
 
     <link rel="stylesheet" href="/css/style.css" />
-    <script type="module" src="../js/checkout.js"></script>
+
   </head>
 
   <body>
     <header class="divider">
       <div class="logo">
-        <img src="images/noun_Tent_2517.svg" alt="tent image for logo" />
-
-        <a href="index.html">
-          Sleep
-          <span class="highlight">Outside</span>
-        </a>
+        <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
+        <a href="/index.html"> Sleep<span class="highlight">Outside</span></a>
       </div>
 
       <div class="cart">
-        <a href="cart/">
+        <a href="../cart/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path
               d="M18.9 32.6c1.1 2.4 2.5 3.3 5.4 3.3 1.6 0 3.6-0.3 5.9-0.6 3.2-0.5 6.9-1 11.2-1 2.1 0 4.3 0.1 6.4 0.3 2.1 0.1 4.2 0.3 6.1 0.3 3.2 0 5.2-0.4 5.9-1.2 2.7-2.7 2.8-8.8 2.9-14.6 0.1-6.7 0.2-14.5 4.6-18.7 -0.5 0-1 0-1.6 0 -14.2 0-37.5 0-41.1 0C15.6 6.2 14.9 23.6 18.9 32.6z"
@@ -58,52 +54,9 @@
     </header>
 
     <main class="divider">
-      <section class="products">
-        <h2>Review & Place your Order</h2>
-        <form name="checkout" class="checkoutForm" action="./success.html">
-          <fieldset>
-            <legend>Customer Name</legend>
-            <label>First Name:* <input type="text" name="fname" id="fname" required></label><br>
-            <label>Last Name:* <input type="text" name="lname" id="lname" required></label><br>
-          </fieldset>
-          <fieldset>
-            <legend>Address</legend>
-            <label>Street Address:* <input type="text" name="street" id="streetAddress" required></label><br>
-            <label>City:* <input type="text" name="city" id="city" required></label><br>
-            <label>State:* <input type="text" name="state" id="state" placeholder="UT" pattern="^(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)$" required></label><br>
-            <label>Zipcode:* <input type="text" name="zip" id="zipcode" pattern="^\d{5}(-\d{4})?$" placeholder="12345" required></label><br>
-          </fieldset>
-          <fieldset>
-            <legend>Payment</legend>
-            <label>Credit Card Number:* <input type="text" name="cardNumber" id="cardNumber" value="1234123412341234" required></label><br>
-            <label>Expiration Date:* <input type="text" name="expiration" id="expiration" value="8/25" required></label><br>
-            <label>Security Code:* <input type="text" name="code" id="securityCode" value="123" required></label><br>
-          </fieldset>
-          <fieldset class="checkout-summary">
-            <legend>Order Summary</legend>
-            <ul>
-              <li>
-                <label for="cartTotal">
-                  Item Subtotal(<span id="num-items"></span>)</label>
-                <p name="cartTotal" id="cartTotal"></p>
-              </li>
-              <li>
-                <label for="shipping">Shipping Estimate</label>
-                <p id="shipping"></p>
-              </li>
-              <li>
-                <label for="tax">Tax</label>
-                <p id="tax"></p>
-              </li>
-              <li>
-                <label for="orderTotal"><b>Order Total</b></label>
-                <p id="orderTotal"></p>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="purchaseButton" type="submit">Purchase</button>
-        </form>
-      </section>
+        <h1>Thanks for placing your order!</h1>
+        
+
     </main>
 
     <footer>&copy;NOT a real business</footer>
