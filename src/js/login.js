@@ -7,16 +7,12 @@ loadHeaderFooter();
 const redirect = getParam("redirect");
 
 // set a listener for form submission in a login function
-function loginSubmit() {
-  document.querySelector("form").addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const email = formData.get("email");
-    const password = formData.get("password");
+document.querySelector("form").addEventListener("submit", async (event) => {
+event.preventDefault();
+const formData = new FormData(event.target);
+const email = formData.get("email");
+const password = formData.get("password");
 
-    // check if username and password are correct
-    login({ "email": email, "password": password }, redirect);
-  });
-}
-
-loginSubmit();
+// check if username and password are correct
+login({ email: email, password: password }, redirect);
+});
