@@ -321,6 +321,14 @@ input[type=number] {
   margin: 0;
 }
 
+.loginbtn {
+  margin-bottom: 5%;
+}
+
+.login a {
+  text-decoration: none;
+  color: white;
+}
 
 
 
