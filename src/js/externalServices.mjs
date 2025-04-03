@@ -31,3 +31,23 @@ export async function checkout(data) {
   });
   return await convertToJson(response);
 }
+
+export async function loginRequest(creds) {
+  const response = await fetch(baseURL + "login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(creds),
+  });
+  return await convertToJson(response);
+}
+
+export async function getOrders(token) {
+  const response = await fetch(baseURL + "orders", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return await convertToJson(response);
+}
