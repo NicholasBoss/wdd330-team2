@@ -10,6 +10,8 @@ export async function productList(category) {
     // console.log(products);
     products.slice(0, 4).forEach(product => {
     // products.forEach(product => {
+        const discount = product.SuggestedRetailPrice.toFixed(2) - product.FinalPrice.toFixed(2);
+        const discountFlag = (discount * 100) / product.SuggestedRetailPrice.toFixed(2);
         let markup = `<li class="product-card">
         <a href="/product_pages/index.html?product=${product.Id}">
         <img
@@ -18,7 +20,9 @@ export async function productList(category) {
         />
         <h3 class="card__brand">${product.Brand.Name}</h3>
         <h2 class="card__name">${product.NameWithoutBrand}</h2>
-        <p class="product-card__price">${product.ListPrice}</p></a>
+        <p class="product-card__price">${product.ListPrice}
+        <span class="discount"> save $${discount.toFixed(2)} </span> <span class="discount_flag">${discountFlag.toFixed(0)} % off!</span>
+        </p></a>
         </li>`
         createProductCard(markup);
         });
